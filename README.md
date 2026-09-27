@@ -321,6 +321,47 @@ Non-code resources — fonts, galleries, portfolio media.
 
 ---
 
+## 10. Skill Collections & Bulk Installs (from @FareaNFts 20-repo list)
+
+Source: https://x.com/FareaNFts/status/2103564316029120624 — a "20 trending repos this week" list (NOT a curated skill set). Handled skills-only: installed the genuine Claude Code agent skills, catalogued the rest, skipped platforms/libraries (PyTorch, Odoo, quiche, cline, self-hosted services).
+
+### security-audit ✅ INSTALLED
+- **Link:** https://github.com/cloudflare/security-audit-skill
+- **Type:** Agent skill — **installed at `~/.claude/skills/security-audit`**
+- **What it is:** Turns the agent into a security auditor — vulnerability review across web/auth, client-side, cloud, supply-chain, memory-safety, LLM/AI attack classes, with a full audit workflow + findings schema/validators.
+- **Best used for:** Security passes on any project before deploy (OnIt, Rex, the portals). Gate the full workflow behind an explicit "audit" request.
+
+### addyosmani/agent-skills ✅ INSTALLED (25 skills)
+- **Link:** https://github.com/addyosmani/agent-skills
+- **Type:** Agent skill collection — **all 25 installed to `~/.claude/skills/` (original names)**
+- **What it is:** General production-engineering workflows: TDD, debugging-and-error-recovery, planning-and-task-breakdown, incremental-implementation, code-review-and-quality, performance-optimization, frontend-ui-engineering, context-engineering, spec-driven-development, shipping-and-launch, and 15 more.
+- **Best used for:** Disciplined build workflow across all projects. Reinstall: `npx skills add addyosmani/agent-skills`.
+
+### anthropics/knowledge-work-plugins ✅ INSTALLED (252 skills, namespaced)
+- **Link:** https://github.com/anthropics/knowledge-work-plugins
+- **Type:** Plugin/skill mega-collection — **all 252 installed, folder+name namespaced `kw-<category>-<leaf>`** (e.g. `kw-data-build-dashboard`, `kw-engineering-code-review`) to avoid collisions.
+- **What it is:** Knowledge-work skills across data, engineering, productivity, legal, finance, marketing, sales, HR, operations, product-management, design, partner-built (Zoom, etc.). Most relevant here: `kw-data-*` (build-dashboard, data-visualization, sql-queries, explore-data, statistical-analysis) for the Tableau/BigQuery dashboards.
+- **⚠️ Context cost:** 252 skills load into every session. If it's too heavy, remove with: `ls ~/.claude/skills | grep '^kw-' | while read s; do rm -rf ~/.claude/skills/"$s"; done`.
+- **Note:** The *intended* install is via the plugin marketplace (namespaced per plugin) in an interactive terminal: `/plugin marketplace add anthropics/knowledge-work-plugins`.
+
+### anthropics/financial-services — catalog only (not installed)
+- **Link:** https://github.com/anthropics/financial-services
+- **Type:** Finance plugin/skill collection (112 skills)
+- **What it is:** Capital-markets skills — equity research, bond futures basis, swap-curve strategy, valuation review, NAV tie-out, IC memos, tear sheets (S&P, LSEG partner-built). Mostly buy-side/sell-side finance, not Radix's domain economics.
+- **Best used for:** Cherry-pick if ever needed (e.g. `xlsx-author`, `ic-memo`). Install a single skill by copying its folder, or the whole plugin via marketplace.
+
+### affaan-m/ECC — catalog only (not installed)
+- **Link:** https://github.com/affaan-m/ECC
+- **Type:** Personal skill mega-collection (**903 skills**)
+- **What it is:** A huge grab-bag (homelab VLANs, energy procurement, Swift concurrency, Django/Go/Kotlin patterns, brand voice, agent orchestration…). Not installed — bulk-installing 903 would swamp context.
+- **Best used for:** Browse and copy an individual `skills/<name>` folder if one is a perfect fit.
+
+### Not installed (per-project tools / platforms from the same list)
+Per-project dev tools — pull into a specific project as needed: alibaba/open-code-review, stablyai/orca (agents in worktrees), vectorize-io/hindsight (cross-session agent memory), Fission-AI/OpenSpec (spec-driven dev), superdesigndev/treg (agent-tool gateway), davila7/claude-code-templates (`npx claude-code-templates`).
+Apps / libraries / platforms — not skills: anthropics/claude-code (already running), cline/cline (VS Code ext), cloudflare/quiche (Rust QUIC), odoo/odoo (ERP), pytorch/pytorch (ML), Tencent/WeKnora + TencentCloud/Octop (self-hosted services), paperclipai/paperclip (agent dashboard).
+
+---
+
 ## Quick pick guide
 
 | Need | Reach for |
@@ -352,6 +393,9 @@ Non-code resources — fonts, galleries, portfolio media.
 | Fast "show what I built" launch clip | brag / brag-slim ✅ installed |
 | Distinctive shadcn hero/background bits | 23rd ✅ installed |
 | Type-safe LLM output (self-hosted GPU) | TypeLLM |
+| Security audit / vuln review | security-audit ✅ installed |
+| Disciplined build workflow (TDD, review, planning) | addyosmani/agent-skills ✅ installed |
+| Dashboard / SQL / data-viz skills | kw-data-* ✅ installed |
 | 3D hero scene | Spline |
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
