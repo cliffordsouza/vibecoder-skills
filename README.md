@@ -337,12 +337,12 @@ Source: https://x.com/FareaNFts/status/2103564316029120624 — a "20 trending re
 - **What it is:** General production-engineering workflows: TDD, debugging-and-error-recovery, planning-and-task-breakdown, incremental-implementation, code-review-and-quality, performance-optimization, frontend-ui-engineering, context-engineering, spec-driven-development, shipping-and-launch, and 15 more.
 - **Best used for:** Disciplined build workflow across all projects. Reinstall: `npx skills add addyosmani/agent-skills`.
 
-### anthropics/knowledge-work-plugins ✅ INSTALLED (252 skills, namespaced)
+### anthropics/knowledge-work-plugins ✅ INSTALLED (cherry-picked 14 of 252)
 - **Link:** https://github.com/anthropics/knowledge-work-plugins
-- **Type:** Plugin/skill mega-collection — **all 252 installed, folder+name namespaced `kw-<category>-<leaf>`** (e.g. `kw-data-build-dashboard`, `kw-engineering-code-review`) to avoid collisions.
-- **What it is:** Knowledge-work skills across data, engineering, productivity, legal, finance, marketing, sales, HR, operations, product-management, design, partner-built (Zoom, etc.). Most relevant here: `kw-data-*` (build-dashboard, data-visualization, sql-queries, explore-data, statistical-analysis) for the Tableau/BigQuery dashboards.
-- **⚠️ Context cost:** 252 skills load into every session. If it's too heavy, remove with: `ls ~/.claude/skills | grep '^kw-' | while read s; do rm -rf ~/.claude/skills/"$s"; done`.
-- **Note:** The *intended* install is via the plugin marketplace (namespaced per plugin) in an interactive terminal: `/plugin marketplace add anthropics/knowledge-work-plugins`.
+- **Type:** Plugin/skill mega-collection — installed **14 namespaced `kw-*` skills** (initially all 252, then pruned 2026-09-27 to cut context bloat and dedupe against Addy's higher-starred set + the design plugin).
+- **Kept (14):** data → `kw-data-build-dashboard`, `kw-data-sql-queries`, `kw-data-data-visualization`, `kw-data-explore-data`, `kw-data-analyze`, `kw-data-statistical-analysis`, `kw-data-validate-data`; finance → `kw-finance-financial-statements`, `kw-finance-reconciliation`, `kw-finance-variance-analysis`; product → `kw-product-management-metrics-review`, `kw-product-management-roadmap-update`, `kw-product-management-product-brainstorming`; marketing → `kw-marketing-seo-audit`. These map to the Tableau/BigQuery dashboards, rebate/MDF/pricing finance, and product work.
+- **Dropped (238):** all engineering (covered by Addy's 25), all design (covered by the `design:*` plugin + gstack), and irrelevant domains (Zoom SDKs, small-business, HR, legal, sales, bio-research, ops).
+- **Note:** For any dropped skill later, grab its folder from the repo, or install the whole thing namespaced via `/plugin marketplace add anthropics/knowledge-work-plugins` in an interactive terminal.
 
 ### anthropics/financial-services — catalog only (not installed)
 - **Link:** https://github.com/anthropics/financial-services
