@@ -40,6 +40,13 @@ Last updated: 2026-09-24
 - **Best used for:** Landing-page loops, launch/promo/demo reels for an app or SaaS — a code-native alternative to Reelfolio that reuses real components. Natural fit for the radix-showreel work.
 - **How to pull in:** Already installed. Reinstall/update: clone the repo and copy `plugins/product-film/skills/product-film` into `~/.claude/skills/`, or `/plugin marketplace add Rieranthony/product-film-skill` then `/plugin install product-film@product-film-skill` in an interactive terminal.
 
+### brag / brag-slim ✅ INSTALLED
+- **Link:** https://github.com/latent-spaces/brag
+- **Type:** Agent skill — **installed at `~/.claude/skills/brag` and `~/.claude/skills/brag-slim`**
+- **What it is:** Turns the current project into a short, shareable **launch video** (motion + music + share copy) from one command — reads the project code directly, no live URL needed. `/brag` uses Hyperframes; `/brag-slim` is a single-file version (built with tools already on the machine, tuned for Opus 5.5). Needs Node 22+ and ffmpeg.
+- **Best used for:** Fast "show what I built" launch clips for any shipped project. Lighter/faster than product-film (which builds a fuller Remotion film from the design system).
+- **How to pull in:** Already installed. Usage: `let's /brag` (or `/brag-slim`) from a project dir; flags `--tone`, `--voice`, `--full`.
+
 ---
 
 ## 2. UI Component Libraries
@@ -92,6 +99,13 @@ Last updated: 2026-09-24
 - **What it is:** A community registry of hand-crafted React components, page templates, and shadcn themes. Registry model — code is copied into your project (you own it). Install via shadcn CLI, or paste a prompt so an agent (Cursor/Claude/v0) rebuilds it in your codebase.
 - **Best used for:** Designed-from-scratch heroes, pricing tables, and full page templates — agent-ready. Free tier limits daily copies. Complements React Bits / KokonutUI.
 - **How to pull in:** shadcn CLI, or agent prompt from the component page.
+
+### 23rd ✅ INSTALLED (skill)
+- **Link:** https://github.com/radiumcoders/23rd.dev
+- **Type:** shadcn/ui registry + agent skill — **skill installed at `~/.claude/skills/23rd`**
+- **What it is:** A small, opinionated collection of ~11 polished shadcn/ui components for React + Svelte 5 — ASCII Fluid, Gooey Color Picker, Shader Gradient, starfield, orb, page-tilt, hero atmospheres, WebGL washes, 404s. Next.js 16 / React 19 / Tailwind 4 / Base UI. Copy-paste, you own the source.
+- **Best used for:** Distinctive hero/background flourishes on landing pages (same "landing only, not internal tools" caution as React Bits). The installed skill knows the install commands, props, and when *not* to use each.
+- **How to pull in:** Components: `pnpm dlx shadcn@latest add @23rd/<name>`. Skill: already installed.
 
 ---
 
@@ -244,6 +258,13 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 - **Best used for:** Any iOS app listing (e.g. if OnIt or a future app ships to the App Store).
 - **How to pull in:** `npx skills add alexszczurek/before-skills`.
 
+### TypeLLM
+- **Link:** https://github.com/TypeLLM/TypeLLM
+- **Type:** Python library (NOT a skill) — *not installed; per-project*
+- **What it is:** Type-safe structured generation for LLMs without touching model weights — constrain outputs to schemas (str/int/bool/enum), optional thinking/budget, vision, field dependency graphs, probability distributions, option-order-bias reduction via permutation averaging. Built on SGLang; runs against a GPU server (Qwen3 variants etc.). Apache 2.0.
+- **Best used for:** Reliable structured extraction/classification in an LLM app where you self-host a model. Overkill unless you're running SGLang on a GPU; for hosted Claude, prefer Anthropic tool-use / structured outputs.
+- **How to pull in:** Per-project into a venv: `pip install -U typellm` + point at an SGLang server. Not installed globally (would pull heavy deps and needs a GPU server to be useful).
+
 ---
 
 ## 8. 3D & Interactive Web Graphics
@@ -328,6 +349,9 @@ Non-code resources — fonts, galleries, portfolio media.
 | Registry of agent-ready components | 21st.dev |
 | Code-driven cinematic / 3D animation | Theatre.js |
 | Product video / launch reel (in code) | product-film ✅ installed |
+| Fast "show what I built" launch clip | brag / brag-slim ✅ installed |
+| Distinctive shadcn hero/background bits | 23rd ✅ installed |
+| Type-safe LLM output (self-hosted GPU) | TypeLLM |
 | 3D hero scene | Spline |
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
