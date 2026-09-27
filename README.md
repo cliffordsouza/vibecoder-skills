@@ -33,6 +33,13 @@ Last updated: 2026-09-24
 - **Best used for:** Cinematic / keyframed animation and 3D scene choreography beyond what CSS transitions cover — landing-page hero moments, scroll storytelling. Heavier than transitions.dev; reach for it only when the motion is the point.
 - **How to pull in:** `npm install @theatre/core @theatre/studio`.
 
+### product-film ✅ INSTALLED
+- **Link:** https://github.com/Rieranthony/product-film-skill
+- **Type:** Agent skill (Claude Code) — **installed at `~/.claude/skills/product-film`**
+- **What it is:** Generates showreel-grade **product videos in code with Remotion**, built from the product's own design system, components, logo, and voice. 7-step flow (design discovery → interview → brand kit → music sync → scene build → review stills/drafts → verified render). Outputs muted web loop, music version, WebM, and a poster — all verified for color, duration, seamless loop. Deps: Node/Bun, Remotion (free for individuals/small teams), Python (uv) + ffmpeg.
+- **Best used for:** Landing-page loops, launch/promo/demo reels for an app or SaaS — a code-native alternative to Reelfolio that reuses real components. Natural fit for the radix-showreel work.
+- **How to pull in:** Already installed. Reinstall/update: clone the repo and copy `plugins/product-film/skills/product-film` into `~/.claude/skills/`, or `/plugin marketplace add Rieranthony/product-film-skill` then `/plugin install product-film@product-film-skill` in an interactive terminal.
+
 ---
 
 ## 2. UI Component Libraries
@@ -320,6 +327,7 @@ Non-code resources — fonts, galleries, portfolio media.
 | iOS App Store listing (ASO) | before-skills |
 | Registry of agent-ready components | 21st.dev |
 | Code-driven cinematic / 3D animation | Theatre.js |
+| Product video / launch reel (in code) | product-film ✅ installed |
 | 3D hero scene | Spline |
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
