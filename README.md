@@ -362,6 +362,26 @@ Apps / libraries / platforms — not skills: anthropics/claude-code (already run
 
 ---
 
+## 11. From @neerajjj6785 "Top 10 OpenCode skill repos"
+
+Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scanned all 10; installed the additive/relevant, skipped duplicates. (Star counts on this list looked inflated, so decisions weighted relevance + non-duplication over raw stars.)
+
+**Installed (trimmed to cores):**
+- **Ponytail** ✅ — https://github.com/DietrichGebert/ponytail — anti-over-engineering "lazy senior dev" decision-ladder. Kept `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-help` (dropped debt/gain scoreboards). Install: `npx skills add DietrichGebert/ponytail -g`.
+- **Caveman** ✅ — https://github.com/JuliusBrussee/caveman — token-saving compressed output. Kept `caveman`, `caveman-compress`, `caveman-help` (dropped the ~10 "Caveman Cloud" telemetry skills + the bundled `cavecrew` workflow set, which duplicated Addy's). Install: `npx skills add JuliusBrussee/caveman -g`.
+- **Archify** ✅ — https://github.com/tt-a1i/archify — description → interactive standalone-HTML diagrams (architecture/workflow/sequence/dataflow/lifecycle). Kept `archify`, `archify-review`. Fits the HTML-artifact work (brochures, showreels). Install: `npx skills add tt-a1i/archify -g`.
+
+**Skipped (with reason):**
+- **Understand-Anything** (Egonex-AI) — same type as a codebase→knowledge-graph tool; deduped in favour of Graphify.
+- **Graphify** (Graphify-Labs) — codebase→knowledge graph, but it's a **pip tool** (`pip install graphifyy` + `graphify install`); not installed globally (needs Python + per-project setup, like TypeLLM). Pull it into a project when you actually want to graph a repo.
+- **UI/UX Pro Max** (nextlevelbuilder) — design-system generator; overlaps the standing UI stack (emil/animate/unslop-ui/uizze). Skipped to avoid conflicting design rules.
+- **Superpowers** (obra) — workflow mega-collection that duplicates Addy's 25 (installed). Would be a swap, not an add.
+- **Impeccable** (pbakaus) — design critique; covered by the `design:*` plugin + gstack `design-review`.
+- **Addy Osmani agent-skills** — already installed (25).
+- **Awesome Claude Skills** (ComposioHQ) — a directory, not skills → see Discovery.
+
+---
+
 ## Quick pick guide
 
 | Need | Reach for |
@@ -396,6 +416,9 @@ Apps / libraries / platforms — not skills: anthropics/claude-code (already run
 | Security audit / vuln review | security-audit ✅ installed |
 | Disciplined build workflow (TDD, review, planning) | addyosmani/agent-skills ✅ installed |
 | Dashboard / SQL / data-viz skills | kw-data-* ✅ installed |
+| Stop the agent over-engineering | ponytail ✅ installed |
+| Cheaper/faster compressed output | caveman ✅ installed |
+| Description → interactive HTML diagram | archify ✅ installed |
 | 3D hero scene | Spline |
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
