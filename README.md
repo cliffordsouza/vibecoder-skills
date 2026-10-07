@@ -47,6 +47,13 @@ Last updated: 2026-09-24
 - **Best used for:** Fast "show what I built" launch clips for any shipped project. Lighter/faster than product-film (which builds a fuller Remotion film from the design system).
 - **How to pull in:** Already installed. Usage: `let's /brag` (or `/brag-slim`) from a project dir; flags `--tone`, `--voice`, `--full`.
 
+### motion-graphics-music-video (makevoid)
+- **Link:** https://github.com/makevoid/motion-graphics-music-video-skill (no-AI-model variant: https://github.com/makevoid/motion-graphics-music-video-skill-noimage)
+- **Type:** Claude Code plugin + agent skill (MIT) - not installed
+- **What it is:** Turns **a song + a creative prompt** into a full animated **character music video**. Researches the brief, writes a PLAN.md (characters, scenes, cost estimate) for approval, then generates in reviewed sub-agent waves: GPT Image 2.5 character sheets, MiniMax H3 animation on green screen, p5.js motion graphics/overlays (lights, smoke, paper, riso FX), Python audio analysis/stems/cutouts, Swift VFX, FFmpeg assembly. Paid via fal.ai (~$30 + ~3M Opus tokens for a ~3 min song). Needs Ruby 3.2+, Node 22+, Python, FFmpeg, ImageMagick; Swift optional. Author notes it runs better from the terminal than the desktop app.
+- **Best used for:** Stylised, character-driven music videos and fun viral-style clips where AI-generated characters are the point. **Not** for brand/partner reels that need real people's likenesses, exact domains/numbers or official logos - use product-film there (assessed for the Radix "Off the Bench" partnerships reel, 2026-10-07). Its p5 FX sketches and beat/energy analysis are worth borrowing on their own.
+- **How to pull in:** In a terminal: `claude plugin marketplace add makevoid/motion-graphics-music-video-skill` then `claude plugin install motion-graphics-music-video@makevoid-music-video --scope user`; set the fal key via `/plugin configure motion-graphics-music-video`; run `/motion-graphics-music-video:motion-graphics-music-video` and supply song + prompt.
+
 ---
 
 ## 2. UI Component Libraries
@@ -411,6 +418,7 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Code-driven cinematic / 3D animation | Theatre.js |
 | Product video / launch reel (in code) | product-film ✅ installed |
 | Fast "show what I built" launch clip | brag / brag-slim ✅ installed |
+| AI character music video from a song | motion-graphics-music-video (makevoid) |
 | Distinctive shadcn hero/background bits | 23rd ✅ installed |
 | Type-safe LLM output (self-hosted GPU) | TypeLLM |
 | Security audit / vuln review | security-audit ✅ installed |
