@@ -4,9 +4,11 @@ A personal catalog of external libraries, component collections, and agent skill
 
 Each entry: **what it is**, **best used for**, and **how to pull it in**.
 
-> Note on "skills": some of these ship as installable **agent skills** (Cursor/Claude Code), some are **npm/CLI component libraries**, and a couple are **browse-and-copy component sites**. The type is labelled per entry.
+> Note on "skills": some of these ship as installable **agent skills** (Cursor/Claude Code), some are **npm/CLI component libraries**, and a couple are **browse-and-copy component sites**. The type is labelled per entry. Entries marked **✅ INSTALLED** are global agent skills already in `~/.claude/skills/`; everything else is a project library / tool / site you pull in when needed.
 
-Last updated: 2026-09-24
+> **Index skill:** a global `vibecoder-skills` skill (`~/.claude/skills/vibecoder-skills`) mirrors this catalog as a quick router, so the agent is catalog-aware in every project and pick-and-chooses the right resource per task. Keep its `SKILL.md` in sync when this file changes.
+
+Last updated: 2026-10-08
 
 ---
 
