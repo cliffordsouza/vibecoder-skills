@@ -75,8 +75,8 @@ Last updated: 2026-10-08
 - **How to pull in:** Browse site, copy components (some Pro-gated).
 
 ### Beautiful UI
-- **Link:** https://www.beautifului.dev/
-- **Type:** Component library site (copy-paste)
+- **Link:** https://www.beautifului.dev/ · repo: https://github.com/slev12397/beautiful-ui
+- **Type:** Component library site + shadcn registry (copy-paste; **no skill** — nothing to install globally)
 - **What it is:** 20+ primitives built specifically for **AI-native interfaces** — loading/thinking traces, streaming text, approval cards, chat composer, prompt bar, task rows, recommendation cards, flowcharts, diff displays. Made by Turbo (design studio).
 - **Best used for:** Building agent/LLM app surfaces (like Rex, OnIt, Lens chat views) where you need purpose-built AI interaction components.
 - **How to pull in:** Copy-paste ready from the site.
@@ -108,6 +108,20 @@ Last updated: 2026-10-08
 - **What it is:** A community registry of hand-crafted React components, page templates, and shadcn themes. Registry model — code is copied into your project (you own it). Install via shadcn CLI, or paste a prompt so an agent (Cursor/Claude/v0) rebuilds it in your codebase.
 - **Best used for:** Designed-from-scratch heroes, pricing tables, and full page templates — agent-ready. Free tier limits daily copies. Complements React Bits / KokonutUI.
 - **How to pull in:** shadcn CLI, or agent prompt from the component page.
+
+### fluid-functionalism ✅ INSTALLED (skill)
+- **Link:** https://github.com/mickadesign/fluid-functionalism
+- **Type:** shadcn registry (~30 components) + agent skill — **skill installed at `~/.claude/skills/fluid-functionalism`** (1k+ stars)
+- **What it is:** A motion-forward shadcn/ui registry — spring-based motion (not durations), a fluid hover highlight that glides to the nearest item, Radix *and* Base UI flavours, blocks (app sidebar, settings dialog) and presets. Next.js 15 / React 19 / Tailwind 4 / Framer Motion. Load Inter with its `opsz` axis for weight animations.
+- **Best used for:** Polished, legible state-change motion on real app UIs (not just landing pages) — a good fit given the standing "apply motion wherever applicable" rule. The installed skill knows the registry + install commands.
+- **How to pull in:** Registry: `npx shadcn@latest registry add @fluid` then `npx shadcn@latest add @fluid/<item>` (prefix `base/` for Base UI). Skill: already installed.
+
+### mdxcn ✅ INSTALLED (skill)
+- **Link:** https://github.com/shadcn-labs/mdxcn · mdxcn.dev
+- **Type:** MDX component library (shadcn-compatible registry) + agent skill — **skill installed at `~/.claude/skills/mdxcn`** (MIT)
+- **What it is:** Markdown-friendly React components for MDX — callouts, steps, terminals, **text-based charts/diagrams drawn with glyphs (not SVG/canvas)**, and timelines. Customizable corners, glyphs, palettes, accents; TypeScript props; shadcn CLI + `registry.json`.
+- **Best used for:** Docs, READMEs, changelogs, and content-heavy pages where you want callouts/steps/terminals and lightweight ASCII-style charts inline in MDX.
+- **How to pull in:** Copy via the shadcn CLI from mdxcn.dev, or use the installed skill.
 
 ### 23rd ✅ INSTALLED (skill)
 - **Link:** https://github.com/radiumcoders/23rd.dev
@@ -422,6 +436,8 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Fast "show what I built" launch clip | brag / brag-slim ✅ installed |
 | AI character music video from a song | motion-graphics-music-video (makevoid) |
 | Distinctive shadcn hero/background bits | 23rd ✅ installed |
+| Motion-forward shadcn components (app UIs) | fluid-functionalism ✅ installed |
+| MDX callouts/steps/terminals/glyph charts | mdxcn ✅ installed |
 | Type-safe LLM output (self-hosted GPU) | TypeLLM |
 | Security audit / vuln review | security-audit ✅ installed |
 | Disciplined build workflow (TDD, review, planning) | addyosmani/agent-skills ✅ installed |
