@@ -335,6 +335,13 @@ Non-code resources — fonts, galleries, portfolio media.
 - **Best used for:** Reference and direction-setting before designing a new UI or brand surface.
 - **How to pull in:** Browse.
 
+### SEESAW
+- **Link:** https://www.seesaw.website/
+- **Type:** Design-inspiration gallery (browse-only — no code/API/skill)
+- **What it is:** "The best web design inspiration" — hand-picked sites updated daily, searchable and filterable by category (Design, Portfolios, AI, Fintech, etc.). Many designer/studio portfolios plus new product launches.
+- **Best used for:** Direction-setting before a new UI/brand surface; a sibling to Inspora. Can't be installed as a skill (gallery, not code) — referenced via the `vibecoder-skills` index. Point me at a category and I can fetch specific listings.
+- **How to pull in:** Browse.
+
 ### Reelfolio
 - **Link:** https://reelfolio.io/
 - **Type:** Showreel generator (paid)
@@ -449,6 +456,6 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
 | Free fonts | bestfreefonts.com |
-| Design inspiration | Inspora |
+| Design inspiration | Inspora, SEESAW |
 | Turn screenshots into a showreel | Reelfolio |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
