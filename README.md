@@ -354,7 +354,11 @@ Non-code resources — fonts, galleries, portfolio media.
 - **Type:** AI-readable design-system gallery + **MCP connector** (DESIGN.md per style)
 - **What it is:** 2,000+ product-website styles, each with a **`DESIGN.md`** capturing colors, typography, spacing, and components — "AI-readable design systems from leading product websites." Sort by Trending/Popular/Newest. Ships an **MCP connection** for Claude/Cursor/Codex/v0/Lovable, plus DESIGN.md examples and design prompts. Beta, updated weekly.
 - **Best used for:** Unlike the pure galleries, this is usable *mid-build* — pull a reference site's `DESIGN.md` as a concrete style brief to steer a new UI, or connect its MCP for live access. Strong fit for matching a target aesthetic fast.
-- **How to pull in:** Grab a style's `DESIGN.md` and feed it as design rules, or connect the Refero MCP in an interactive session (`/mcp`). Not an installed skill (it's a gallery + MCP), but surfaced via the `vibecoder-skills` index.
+- **How to pull in — three options:**
+  1. **Free, no account:** grab a style's `DESIGN.md` from the site and feed it as design rules. (I can fetch one on request.)
+  2. **Refero MCP** (145k+ screens, 12k+ user flows — live, agent-queryable). **Requires a Refero Pro subscription (~$45/quarter or annual); MCP access is Pro-only.** Steps: open https://refero.design/mcp → "Connect your tool" → pick **Claude Code** → copy the one-line config it shows and add it (this is an interactive-terminal step: `/mcp`, not doable from the desktop Code chat) → **restart** the tool → the first Refero call opens a browser to **sign in with your Refero account**, automatic after. Then ask e.g. "Find onboarding flows from fintech apps."
+  3. **Refero Skill** (free, open source): `npx skills add https://github.com/referodesign/refero_skill` — a research-first design *methodology* (research references → extract patterns → design with craft rules for type/color/spacing/motion). Installable as a real agent skill; its reference-fetching is strongest when the Pro MCP is also connected.
+- **Note:** The gallery + MCP themselves aren't an installed skill; option 3 is. All surfaced via the `vibecoder-skills` index.
 
 ### Reelfolio
 - **Link:** https://reelfolio.io/
