@@ -342,6 +342,20 @@ Non-code resources — fonts, galleries, portfolio media.
 - **Best used for:** Direction-setting before a new UI/brand surface; a sibling to Inspora. Can't be installed as a skill (gallery, not code) — referenced via the `vibecoder-skills` index. Point me at a category and I can fetch specific listings.
 - **How to pull in:** Browse.
 
+### recent.design
+- **Link:** https://recent.design/
+- **Type:** Design-inspiration gallery + job board (browse-only — no code/API)
+- **What it is:** "The best design inspiration on the Internet" — curated web/branding/motion/illustration/poster/print work, plus launch videos, OG images, app screenshots and icons; each item credits its creator.
+- **Best used for:** Broad visual reference across mediums before a new UI/brand surface. Sibling to Inspora/SEESAW.
+- **How to pull in:** Browse.
+
+### Refero Styles ⭐ (actionable, not just browse)
+- **Link:** https://styles.refero.design/
+- **Type:** AI-readable design-system gallery + **MCP connector** (DESIGN.md per style)
+- **What it is:** 2,000+ product-website styles, each with a **`DESIGN.md`** capturing colors, typography, spacing, and components — "AI-readable design systems from leading product websites." Sort by Trending/Popular/Newest. Ships an **MCP connection** for Claude/Cursor/Codex/v0/Lovable, plus DESIGN.md examples and design prompts. Beta, updated weekly.
+- **Best used for:** Unlike the pure galleries, this is usable *mid-build* — pull a reference site's `DESIGN.md` as a concrete style brief to steer a new UI, or connect its MCP for live access. Strong fit for matching a target aesthetic fast.
+- **How to pull in:** Grab a style's `DESIGN.md` and feed it as design rules, or connect the Refero MCP in an interactive session (`/mcp`). Not an installed skill (it's a gallery + MCP), but surfaced via the `vibecoder-skills` index.
+
 ### Reelfolio
 - **Link:** https://reelfolio.io/
 - **Type:** Showreel generator (paid)
@@ -456,6 +470,7 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
 | Free fonts | bestfreefonts.com |
-| Design inspiration | Inspora, SEESAW |
+| Design inspiration | Inspora, SEESAW, recent.design |
+| AI-readable design system (DESIGN.md) to match an aesthetic | Refero Styles |
 | Turn screenshots into a showreel | Reelfolio |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
