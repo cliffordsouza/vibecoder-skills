@@ -10,6 +10,8 @@ Each entry: **what it is**, **best used for**, and **how to pull it in**.
 
 > **Proactive suggestions:** when building an app/tool/dashboard/website whose type or aesthetic matches an entry here, the agent surfaces the relevant resources up front (a short 1–3 pick shortlist with why each fits) rather than waiting to be asked — honouring the per-category cautions. Standing ask from Cliff (2026-10-12).
 
+> **Anti-slop house rule (always on):** never use the AI "eyebrow" section-header — small all-caps + wide letter-spacing in a muted/desaturated accent tint (the pattern itself is the tell, on any background; e.g. a light-blue tracked-out `WHERE RADIX STANDS`). It's a clear giveaway of AI/Claude-built UI. Use sentence/Title-case headings with real size/weight/color hierarchy instead. Standing rule from Cliff (2026-10-12); the installed `unslop-ui` + `open-design anti-ai-slop.md` cover the wider tell list.
+
 Last updated: 2026-10-08
 
 ---
