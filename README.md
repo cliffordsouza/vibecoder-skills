@@ -8,6 +8,8 @@ Each entry: **what it is**, **best used for**, and **how to pull it in**.
 
 > **Index skill:** a global `vibecoder-skills` skill (`~/.claude/skills/vibecoder-skills`) mirrors this catalog as a quick router, so the agent is catalog-aware in every project and pick-and-chooses the right resource per task. Keep its `SKILL.md` in sync when this file changes.
 
+> **Proactive suggestions:** when building an app/tool/dashboard/website whose type or aesthetic matches an entry here, the agent surfaces the relevant resources up front (a short 1–3 pick shortlist with why each fits) rather than waiting to be asked — honouring the per-category cautions. Standing ask from Cliff (2026-10-12).
+
 Last updated: 2026-10-08
 
 ---
