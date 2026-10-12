@@ -339,26 +339,13 @@ Non-code resources — fonts, galleries, portfolio media.
 - **Best used for:** Sourcing a typeface fast without licensing hassle. Confirm each font's license before commercial use.
 - **How to pull in:** Download from the listing.
 
-### Inspora
-- **Link:** https://inspora.design/
-- **Type:** Design-inspiration gallery
-- **What it is:** Curated design work across Web, Branding, Product, Motion, Illustration, 3D, Print.
-- **Best used for:** Reference and direction-setting before designing a new UI or brand surface.
-- **How to pull in:** Browse.
-
-### SEESAW
-- **Link:** https://www.seesaw.website/
-- **Type:** Design-inspiration gallery (browse-only — no code/API/skill)
-- **What it is:** "The best web design inspiration" — hand-picked sites updated daily, searchable and filterable by category (Design, Portfolios, AI, Fintech, etc.). Many designer/studio portfolios plus new product launches.
-- **Best used for:** Direction-setting before a new UI/brand surface; a sibling to Inspora. Can't be installed as a skill (gallery, not code) — referenced via the `vibecoder-skills` index. Point me at a category and I can fetch specific listings.
-- **How to pull in:** Browse.
-
-### recent.design
-- **Link:** https://recent.design/
-- **Type:** Design-inspiration gallery + job board (browse-only — no code/API)
-- **What it is:** "The best design inspiration on the Internet" — curated web/branding/motion/illustration/poster/print work, plus launch videos, OG images, app screenshots and icons; each item credits its creator.
-- **Best used for:** Broad visual reference across mediums before a new UI/brand surface. Sibling to Inspora/SEESAW.
-- **How to pull in:** Browse.
+### Inspiration galleries & directories (browse-only — no code/skill)
+Direction-setting references before a new UI/brand surface. All browse-only; I can fetch specific listings/categories on request. For something *actionable* (a style you can apply), use Refero Styles below.
+- **mkdir.directory** (https://mkdir.directory/) — **start here**: a directory of 29 inspiration galleries, vote-ranked, filterable by Awards / Galleries / Landing / Sections / Motion. Use it to pick the right gallery for the job.
+- **DesignEng** (https://www.designeng.tools/) — ~190 design-engineering resources by category, **plus free on-site utilities worth using mid-build: fluid type scale, fluid space scale, contrast checker, OKLCH palette generator, easing generator.**
+- **Inspora** (https://inspora.design/) — curated work across Web, Branding, Product, Motion, Illustration, 3D, Print.
+- **SEESAW** (https://www.seesaw.website/) — hand-picked sites, daily, filterable (Design, Portfolios, AI, Fintech…); lots of portfolios + new launches.
+- **recent.design** (https://recent.design/) — broad across mediums: web/branding/motion/illustration/poster/print, launch videos, OG images, app screenshots & icons.
 
 ### Refero Styles ⭐ (actionable, not just browse)
 - **Link:** https://styles.refero.design/
@@ -371,20 +358,6 @@ Non-code resources — fonts, galleries, portfolio media.
   3. **Refero Skill** ✅ INSTALLED (free, open source): `npx skills add https://github.com/referodesign/refero_skill` — installed as `~/.claude/skills/refero-design`. A research-first design *methodology* (research references → extract patterns → design with craft rules for type/color/spacing/motion). Reference-fetching is strongest when the Pro MCP is connected (not currently).
 - **⚠️ Caveat on the skill:** it declares itself the *primary/default* UI-design skill and makes reference-research *mandatory* — it will try to drive any UI task and may conflict with the standing UI-craft stack (emil `animate`/`mobile-native` + `transitions-dev`/`transitions-polish` + `unslop-ui`). Without the Pro MCP its unique value (145k real screens) is unavailable, leaving methodology that overlaps that stack. Remove if it gets in the way: `rm -rf ~/.claude/skills/refero-design`.
 - **Note:** The gallery + MCP themselves aren't an installed skill; option 3 is. All surfaced via the `vibecoder-skills` index.
-
-### DesignEng (directory + utilities)
-- **Link:** https://www.designeng.tools/
-- **Type:** Curated design-engineering directory (~190 resources) + free on-site utilities (no code/skill)
-- **What it is:** "Everything a design engineer needs" — ~190 tagged resources (component libraries, UI kits, AI design tools, inspiration galleries, learning, free assets) with pricing labels. Plus built-in tools: **fluid type scale, fluid space scale, contrast checker, OKLCH palette generator, easing generator**.
-- **Best used for:** Hunting for a resource by category, and quick one-off utility use (grab an OKLCH palette, a fluid type scale, or an easing curve mid-build).
-- **How to pull in:** Browse / use the on-site generators.
-
-### mkdir.directory
-- **Link:** https://mkdir.directory/
-- **Type:** Directory of directories (design-inspiration meta-list)
-- **What it is:** 29 free design-inspiration directories, vote-ranked, filterable by Awards / Galleries / Landing pages / Sections / Motion (e.g. Awwwards, Land-book).
-- **Best used for:** One hop up from Inspora/SEESAW — when you want to pick the *right* inspiration gallery for the job (landing vs sections vs motion).
-- **How to pull in:** Browse.
 
 ### Reelfolio
 - **Link:** https://reelfolio.io/
@@ -501,9 +474,8 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
 | Free fonts | bestfreefonts.com |
-| Design inspiration | Inspora, SEESAW, recent.design |
-| Which inspiration gallery to use | mkdir.directory |
-| Design-eng resource directory + OKLCH/type-scale/easing utilities | DesignEng (designeng.tools) |
+| Design inspiration (galleries + directories) | mkdir.directory, DesignEng, Inspora, SEESAW, recent.design |
+| OKLCH palette / fluid type-scale / easing utilities | DesignEng (designeng.tools) |
 | AI-readable design system (DESIGN.md) to match an aesthetic | Refero Styles |
 | Turn screenshots into a showreel | Reelfolio |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
