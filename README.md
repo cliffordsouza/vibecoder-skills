@@ -372,6 +372,20 @@ Non-code resources — fonts, galleries, portfolio media.
 - **⚠️ Caveat on the skill:** it declares itself the *primary/default* UI-design skill and makes reference-research *mandatory* — it will try to drive any UI task and may conflict with the standing UI-craft stack (emil `animate`/`mobile-native` + `transitions-dev`/`transitions-polish` + `unslop-ui`). Without the Pro MCP its unique value (145k real screens) is unavailable, leaving methodology that overlaps that stack. Remove if it gets in the way: `rm -rf ~/.claude/skills/refero-design`.
 - **Note:** The gallery + MCP themselves aren't an installed skill; option 3 is. All surfaced via the `vibecoder-skills` index.
 
+### DesignEng (directory + utilities)
+- **Link:** https://www.designeng.tools/
+- **Type:** Curated design-engineering directory (~190 resources) + free on-site utilities (no code/skill)
+- **What it is:** "Everything a design engineer needs" — ~190 tagged resources (component libraries, UI kits, AI design tools, inspiration galleries, learning, free assets) with pricing labels. Plus built-in tools: **fluid type scale, fluid space scale, contrast checker, OKLCH palette generator, easing generator**.
+- **Best used for:** Hunting for a resource by category, and quick one-off utility use (grab an OKLCH palette, a fluid type scale, or an easing curve mid-build).
+- **How to pull in:** Browse / use the on-site generators.
+
+### mkdir.directory
+- **Link:** https://mkdir.directory/
+- **Type:** Directory of directories (design-inspiration meta-list)
+- **What it is:** 29 free design-inspiration directories, vote-ranked, filterable by Awards / Galleries / Landing pages / Sections / Motion (e.g. Awwwards, Land-book).
+- **Best used for:** One hop up from Inspora/SEESAW — when you want to pick the *right* inspiration gallery for the job (landing vs sections vs motion).
+- **How to pull in:** Browse.
+
 ### Reelfolio
 - **Link:** https://reelfolio.io/
 - **Type:** Showreel generator (paid)
@@ -488,6 +502,8 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Design→code with an agent (MCP) | paper.design |
 | Free fonts | bestfreefonts.com |
 | Design inspiration | Inspora, SEESAW, recent.design |
+| Which inspiration gallery to use | mkdir.directory |
+| Design-eng resource directory + OKLCH/type-scale/easing utilities | DesignEng (designeng.tools) |
 | AI-readable design system (DESIGN.md) to match an aesthetic | Refero Styles |
 | Turn screenshots into a showreel | Reelfolio |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
