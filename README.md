@@ -260,6 +260,13 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 - **Best used for:** Dropping guardrails into a project so the agent enforces production patterns every session (prevents 1400-line god files). Note: opinionated toward FastAPI/Next/Go — adapt for other stacks.
 - **How to pull in:** Copy the `CLAUDE.md` / `.cursor/rules` / `.claude/skills` into a project.
 
+### lintapple (UI linter)
+- **Link:** https://github.com/gholtzap/lintapple · demo: lintapple.vercel.app
+- **Type:** CLI tool + Playwright integration (npm, Node 22+, MIT, 333⭐) — *per-project, not a global skill*
+- **What it is:** A UI quality linter — "it should be impossible for AI to make a bad UI." Checks a **running page** against a `ui-policy.json`: fonts, text sizes, contrast, control sizes, screen bounds (spacing/alignment/equal-digit-widths/corner-radii need `data-ui-*` attrs). Each finding = rule + element + measured value + suggested fix. Exit 0 pass / 1 findings / 2 error.
+- **Best used for:** A mechanical gate against AI-looking/sloppy UI — pairs directly with the anti-slop house rule. Encode the project's type scale, contrast, and control sizes once, then fail CI on drift. Can run in Playwright via `expectUI(page, testInfo)`.
+- **How to pull in (per project):** `npm i -D lintapple && npx lintapple init` → set fonts/sizes + app URL in `ui-policy.json` → `npm run lint:ui` (or `npx lintapple <url> --json`, `--ready <selector>` for async pages).
+
 ### karpathy vibe-to-agentic
 - **Link:** https://github.com/LearnPrompt/andrej-karpathy-skills/blob/main/karpathy-vibe-to-agentic/SKILL.md
 - **Type:** Agent skill (from `andrej-karpathy-skills`)
@@ -450,6 +457,7 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | De-slop AI visual/UI design | open-design — anti-ai-slop.md |
 | Branded HTML artifacts (no AI look) | visualize |
 | Find where the code debt is | debtmap |
+| Lint/gate UI quality (fonts, contrast, sizing) | lintapple |
 | Auto-clean code slop (agent loop) | desloppify |
 | Prune dead code / abandoned features | vibe-audit |
 | Quick pre-PR code cleanup pass | vibe code cleanup (andyfischer gist) |
