@@ -113,6 +113,14 @@ Last updated: 2026-10-08
 - **Best used for:** Designed-from-scratch heroes, pricing tables, and full page templates — agent-ready. Free tier limits daily copies. Complements React Bits / KokonutUI.
 - **How to pull in:** shadcn CLI, or agent prompt from the component page.
 
+### Amicro (micro-interactions) ✅ skill installed
+- **Link:** https://github.com/Subhan-code/Amicro--Micro-transitions- · demo: amicro.vercel.app
+- **Type:** React component collection (copy-to-code TSX / shadcn registry) + agent skill (npm `@subhanhq/amicro`, 2.6k⭐, MIT) — **skill installed at `~/.claude/skills/amicro-design-system`**
+- **What it is:** Micro-interactions, transitions, hover/text effects, hooks, and **12 card layouts** (arc fan, linear/corner fan, stamp arc, cascade stagger, wheel fan, interactive + CoverFlow carousels, "Time Machine" card stack). Hardware-accelerated, built on Motion (`motion/react`) / framer-motion. React 18/19, Tailwind 3/4.
+- **Best used for:** Eye-catching card galleries, carousels, and micro-interactions — **landing/marketing surfaces** (same caution as React Bits; the fancy card fans are overkill for internal tools). Reuse the motion components; copy-to-code means no runtime dep.
+- **⚠️ Skill scope:** the installed `amicro-design-system` skill is scoped to *building the Amicro repo itself* (its description triggers "in the Amicro repository"), so it won't auto-fire usefully in your projects — the library is the real value, pulled per-project.
+- **How to pull in (per project):** `npx @subhanhq/amicro@latest init` then `add <component>` (e.g. `card-arc-5`); or shadcn registry `@amicro` → `npx shadcn add @amicro/tilt-card`.
+
 ### fluid-functionalism ✅ INSTALLED (skill)
 - **Link:** https://github.com/mickadesign/fluid-functionalism
 - **Type:** shadcn registry (~30 components) + agent skill — **skill installed at `~/.claude/skills/fluid-functionalism`** (1k+ stars)
@@ -462,6 +470,7 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | AI character music video from a song | motion-graphics-music-video (makevoid) |
 | Distinctive shadcn hero/background bits | 23rd ✅ installed |
 | Motion-forward shadcn components (app UIs) | fluid-functionalism ✅ installed |
+| Fancy card fans / carousels / micro-interactions (landing) | Amicro |
 | MDX callouts/steps/terminals/glyph charts | mdxcn ✅ installed |
 | Type-safe LLM output (self-hosted GPU) | TypeLLM |
 | Security audit / vuln review | security-audit ✅ installed |
