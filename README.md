@@ -113,12 +113,11 @@ Last updated: 2026-10-08
 - **Best used for:** Designed-from-scratch heroes, pricing tables, and full page templates — agent-ready. Free tier limits daily copies. Complements React Bits / KokonutUI.
 - **How to pull in:** shadcn CLI, or agent prompt from the component page.
 
-### Amicro (micro-interactions) ✅ skill installed
+### Amicro (micro-interactions) — library only
 - **Link:** https://github.com/Subhan-code/Amicro--Micro-transitions- · demo: amicro.vercel.app
-- **Type:** React component collection (copy-to-code TSX / shadcn registry) + agent skill (npm `@subhanhq/amicro`, 2.6k⭐, MIT) — **skill installed at `~/.claude/skills/amicro-design-system`**
+- **Type:** React component collection (copy-to-code TSX / shadcn registry) — npm `@subhanhq/amicro`, 2.6k⭐, MIT. (Ships an `amicro-design-system` skill but it's scoped to building the Amicro repo itself — **not installed**, no benefit in our projects.)
 - **What it is:** Micro-interactions, transitions, hover/text effects, hooks, and **12 card layouts** (arc fan, linear/corner fan, stamp arc, cascade stagger, wheel fan, interactive + CoverFlow carousels, "Time Machine" card stack). Hardware-accelerated, built on Motion (`motion/react`) / framer-motion. React 18/19, Tailwind 3/4.
-- **Best used for:** Eye-catching card galleries, carousels, and micro-interactions — **landing/marketing surfaces** (same caution as React Bits; the fancy card fans are overkill for internal tools). Reuse the motion components; copy-to-code means no runtime dep.
-- **⚠️ Skill scope:** the installed `amicro-design-system` skill is scoped to *building the Amicro repo itself* (its description triggers "in the Amicro repository"), so it won't auto-fire usefully in your projects — the library is the real value, pulled per-project.
+- **Best used for:** Eye-catching card galleries, carousels, and micro-interactions — **landing/marketing surfaces** (same caution as React Bits; the fancy card fans are overkill for internal tools). Copy-to-code = no runtime dep.
 - **How to pull in (per project):** `npx @subhanhq/amicro@latest init` then `add <component>` (e.g. `card-arc-5`); or shadcn registry `@amicro` → `npx shadcn add @amicro/tilt-card`.
 
 ### fluid-functionalism ✅ INSTALLED (skill)
