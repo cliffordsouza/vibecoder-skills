@@ -39,6 +39,20 @@ Last updated: 2026-10-08
 - **Best used for:** Cinematic / keyframed animation and 3D scene choreography beyond what CSS transitions cover — landing-page hero moments, scroll storytelling. Heavier than transitions.dev; reach for it only when the motion is the point.
 - **How to pull in:** `npm install @theatre/core @theatre/studio`.
 
+### Annimate ⬇️ starter pack vendored
+- **Link:** https://annnimate.com/ · free pack vendored here: `vendor/annimate-starter-pack/`
+- **Type:** GSAP animated-component library (React / Vue / plain HTML) — copy-paste or MCP. Not a skill. Free 16-component starter pack (vendored); full 118 is paid (Solo €87/qtr or €240/yr; Reveal Kit / Menu Kit €149 one-time each).
+- **What it is (vendored 16):** text-reveal, accordion, dual-scramble, curtain-slider, scale-slider, split-flap-board, magnetic-tag-cloud, process-rail, echo-headline, pricing (digit-roll + monthly/yearly), rotating-words, elastic-divider, feature-dialog, image-fly-in, ascii-overlay, multi-level-drawer-menu. Each folder has `.jsx` / `.vue` / `.html`+`.css`+`.js` + an `example` (previews stripped — watch them on the site).
+- **Best used for:** Scroll/hero motion + flashy sections on **landing/marketing surfaces** (GSAP-heavy — landing only, not internal tools, same as React Bits). Needs GSAP (`npm i gsap @gsap/react`); a few need `three`.
+- **How to pull in:** Copy from `vendor/annimate-starter-pack/<component>/` into the project. Full library via annnimate.com copy or its MCP (paid).
+
+### Arc / uiarc.dev
+- **Link:** https://uiarc.dev/
+- **Type:** React UI library + blocks (shadcn CLI / copy / MCP) — source lands in your project. Not a skill. Free tier browsable + installable; **Arc Pro $199 one-time** for the Pro components/blocks.
+- **What it is:** 163 components (line chart, date range picker, command palette…) + 91 **blocks** (dashboards, checkout, inbox triage). "The React UI library your AI agents can build with" — every item has a Markdown doc page + an `llms.txt` index for agents. You own + edit the source/tokens/motion.
+- **Best used for:** Real app UIs *and* internal tools (unlike the landing-only motion libs) — especially the blocks for dashboards/checkout/inbox flows. A broad general-purpose alternative to 21st.dev.
+- **How to pull in:** shadcn CLI add, copy source, or connect the Arc MCP (interactive `/mcp`).
+
 ### product-film ✅ INSTALLED
 - **Link:** https://github.com/Rieranthony/product-film-skill
 - **Type:** Agent skill (Claude Code) — **installed at `~/.claude/skills/product-film`**
@@ -464,6 +478,8 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | iOS App Store listing (ASO) | before-skills |
 | Registry of agent-ready components | 21st.dev |
 | Code-driven cinematic / 3D animation | Theatre.js |
+| GSAP scroll/hero motion components (landing) | Annimate (vendored starter pack) |
+| React components + blocks (dashboards/checkout) | Arc (uiarc.dev) |
 | Product video / launch reel (in code) | product-film ✅ installed |
 | Fast "show what I built" launch clip | brag / brag-slim ✅ installed |
 | AI character music video from a song | motion-graphics-music-video (makevoid) |
