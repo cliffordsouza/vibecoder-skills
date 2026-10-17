@@ -80,10 +80,10 @@ Last updated: 2026-10-08
 
 ### React Bits
 - **Link:** https://github.com/DavidHDev/react-bits
-- **Type:** Component library (copy-paste, 48k+ stars)
+- **Type:** Component library (copy-paste, 49k+ stars; license MIT + Commons Clause, so you can use it in products but not resell the components themselves). No agent skill; the site is `reactbits.dev`.
 - **What it is:** 200+ free, customizable animations for text, backgrounds, UI, and micro-interactions. Four variants per component (JS-CSS, JS-Tailwind, TS-CSS, TS-Tailwind). Includes creative tools (Background Studio, Shape Magic, Texture Lab). Minimal-dependency, tree-shakeable. Vue + Svelte ports exist.
 - **Best used for:** **Landing pages and marketing surfaces** — flashy text/background effects. Heavier WebGL/three.js/GSAP components are overkill for internal tools/CRMs.
-- **How to pull in:** Copy-paste, or via shadcn / jsrepo CLI.
+- **How to pull in (per project):** `npx shadcn@latest add @react-bits/SplitText-TS-TW` (suffix picks the flavour: JS or TS, then CSS or TW), or `npx jsrepo@latest add https://reactbits.dev/r/SplitText-TS-TW`, or copy from a component's Code tab. **MCP route:** it works through the shadcn MCP server; add the `@react-bits` registry to `components.json`, then `npx shadcn@latest mcp init --client claude` inside the project (see https://reactbits.dev/get-started/mcp).
 
 ### Kobra
 - **Link:** https://kobra.systems/
@@ -450,6 +450,29 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 
 ---
 
+## 12. From @RoundtableSpace "10 repos that turn Claude Code and Codex into elite UI designers"
+
+Source: https://x.com/RoundtableSpace/status/2110255627704455591 (2026-10-14), plus the Superdesign repo Cliff sent directly. Scanned all ten. Only three ship agent skills; the rest are libraries (pulled per project). Stars as of 2026-10-17.
+
+**Installed (2 skills):**
+- **animate-text** ✅ — from `marvkr/better-design` (`.agents/skills/animate-text`). A catalog of named text animations (soft blur in, typewriter, line reveal, stagger, crossfade, kinetic builds) as exact JSON specs, translatable to CSS, WAAPI, Motion, GSAP and more. Self-contained, narrow trigger. Installed at `~/.claude/skills/animate-text`.
+- **Superdesign** ✅ (restricted) — skill from `superdesigndev/superdesign-skill` (MIT, 815⭐); the main repo `superdesigndev/superdesign` (7.4k⭐, "AI Product Design Agent", AGPLv3 + a commercial license on some files) is the agent itself. The skill drives the Superdesign CLI (`npx @superdesign/cli`), needs a Superdesign login, and sends design work to their cloud. **Its trigger was narrowed** to explicit requests ("use Superdesign") so it never starts on a generic design task or ships project context to a third party by accident. Re-installing overwrites that edit. Installed at `~/.claude/skills/superdesign`.
+
+**Not installed, and why:**
+- **Design Taste** — `madebymustafa/design-taste` (142⭐, 24 skills: ten genre packs plus taste-* craft skills). It **prescribes the banned eyebrow pattern**: uppercase, letter-spaced mono labels and kickers ("Labels and metadata in mono or small caps, letterspaced (0.08-0.15em), uppercase"), and most of its craft skills duplicate the installed stack. Install only if you strip that guidance: `npx skills add madebymustafa/design-taste`.
+- **Better Design** (main skill + MCP) — `marvkr/better-design` (453⭐, MIT): an open-source design MCP server plus shadcn registry (31 brand-grade themes, design tokens, WCAG rules). Its skill is only a workflow layer over the MCP (`https://better-design.com/api/mcp`), and it overlaps `refero-design`. To use it: `npx skills add marvkr/better-design --skill better-design` and connect the MCP (`claude mcp add --transport http better-design https://better-design.com/api/mcp`). Not connected; it adds a third-party remote server to every session.
+
+**Libraries (per project, nothing global):**
+- **Canvas UI** — https://github.com/DavidHDev/canvas-ui (5k⭐, MIT + Commons Clause). Real HTML with WebGL effects running over it; React, Vue, Svelte, vanilla. Landing pages only. `npx shadcn@latest add @canvas-ui/liquid-react`; MCP via `npx shadcn@latest mcp init --client claude`.
+- **Paper Shaders** — https://github.com/paper-design/shaders (3.7k⭐, Apache 2.0). Zero-dependency canvas shaders (mesh gradients, dot orbits and more), also designable in Paper. `npm i @paper-design/shaders-react` (or `@paper-design/shaders` for vanilla). Landing and hero backgrounds.
+- **UI Layouts** — https://github.com/ui-layouts/uilayouts (3.8k⭐, MIT). Components, effects and blocks; ships a separate MCP for component search (`ui-layouts/mcp`). Needs `npm install motion clsx tailwind-merge`.
+- **Motion Primitives** — https://github.com/ibelick/motion-primitives (6.7k⭐, MIT). Animated, customizable UI kit built on Motion. Good for app UIs as well as marketing pages. Same author as ui-skills.
+- **Cursify** — https://github.com/ui-layouts/cursify (2.1k⭐). Cursor animation library for React and Next.js. Landing pages only. Needs `npm install motion clsx tailwind-merge`.
+- **Hyperiux Components** — https://github.com/Hyperiux-Immersion-Labs/hyperiux-components (94⭐, MIT code, separate "Hyperiux Effects License" for effects). 50+ free effects and 100+ Pro for Next.js, installed with `npx hyperiux init`. It also has its own MCP. Read the effects license before commercial use. Landing pages only.
+- **Trickle UI Kit** — https://github.com/akaieuan/trickle-UI-kit (45⭐, MIT). Pure-CSS text animations for React, zero runtime, SSR-safe. `npx shadcn@latest add https://tricklekit.dev/r/typewriter.json`. A lighter alternative to GSAP text effects.
+
+---
+
 ## Quick pick guide
 
 | Need | Reach for |
@@ -494,6 +517,14 @@ Source: https://x.com/neerajjj6785/status/2104895659157684597 (2026-09-29). Scan
 | Stop the agent over-engineering | ponytail ✅ installed |
 | Cheaper/faster compressed output | caveman ✅ installed |
 | Description → interactive HTML diagram | archify ✅ installed |
+| Named text-animation specs (soft blur, typewriter, line reveal) | animate-text ✅ installed |
+| Design on the Superdesign canvas (only when asked) | Superdesign ✅ installed (restricted) |
+| Pure-CSS text animations, zero runtime | Trickle UI Kit |
+| Animated app UI kit on Motion | Motion Primitives |
+| Cursor animations (landing only) | Cursify |
+| WebGL / shader hero backgrounds (landing only) | Paper Shaders, Canvas UI |
+| Components + effects + component-search MCP | UI Layouts, Hyperiux Components |
+| Design MCP with 31 brand themes (not connected) | Better Design |
 | 3D hero scene | Spline |
 | Interactive animated background | Unicorn Studio |
 | Design→code with an agent (MCP) | paper.design |
