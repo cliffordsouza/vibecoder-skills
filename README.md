@@ -368,6 +368,13 @@ Direction-setting references before a new UI/brand surface. All browse-only; I c
 - **SEESAW** (https://www.seesaw.website/) — hand-picked sites, daily, filterable (Design, Portfolios, AI, Fintech…); lots of portfolios + new launches.
 - **recent.design** (https://recent.design/) — broad across mediums: web/branding/motion/illustration/poster/print, launch videos, OG images, app screenshots & icons.
 
+### Emergent Mind Labs - canvas demos and chart prompts (browse + copy a prompt)
+Two galleries from the same maker. Neither has an API, MCP server, skill or installable code; the value is a working reference plus a prompt you paste into a coding agent. No licence is stated, so rebuild from the idea instead of copying their prompt or source into a product.
+- **500 canvas demos** (https://www.emergentmind.com/visualizations): "500 Things You Can Make with JavaScript and Canvas". Every demo is one `<canvas>`, no WebGL, no libraries. Filter by category (physics, math, algorithms, machine learning, generative art, 3D, fluids, sound, simulation, emergence, fractals, games). Each demo page has a **Copy prompt** (single-file build, a "start simple" list, then a "make it beautiful" list) and a view-source link.
+- **1,337 chart prompts** (https://www.emergentmind.com/chart-prompts): 1,337 line and bar chart styles (669 light, 668 dark) with illustrative data. Open any style at full size and copy a prompt that describes colours, type, spacing and marks so any agent and any charting library can reproduce the look.
+- **Best used for:** giving a dashboard chart a distinct look instead of the library default; starting a canvas, physics or generative piece from a reference that already works.
+- **How to use it:** browse, pick a style, then write your own prompt in the same shape (see the Chart lab page on the site, which does this with six original styles).
+
 ### Refero Styles ⭐ (actionable, not just browse)
 - **Link:** https://styles.refero.design/
 - **Type:** AI-readable design-system gallery + **MCP connector** (DESIGN.md per style)
@@ -497,6 +504,7 @@ Source: https://x.com/RoundtableSpace/status/2110255627704455591 (2026-10-14), p
 | Repeatable agent dev workflow | obra/superpowers |
 | More agent-ready React components | KokonutUI |
 | Dark-mode toggle icon | toggles.dev |
+| A distinct look for a chart, or a canvas/physics starting point | Emergent Mind Labs (chart prompts, 500 canvas demos) |
 | Stop agent shipping UI slop | uizze.sh |
 | iOS App Store listing (ASO) | before-skills |
 | Registry of agent-ready components | 21st.dev |
