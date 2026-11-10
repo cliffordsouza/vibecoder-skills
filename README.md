@@ -405,6 +405,8 @@ Source: https://x.com/FareaNFts/status/2103564316029120624 — a "20 trending re
 - **Type:** Agent skill — **installed at `~/.claude/skills/security-audit`**
 - **What it is:** Turns the agent into a security auditor — vulnerability review across web/auth, client-side, cloud, supply-chain, memory-safety, LLM/AI attack classes, with a full audit workflow + findings schema/validators.
 - **Best used for:** Security passes on any project before deploy (OnIt, Rex, the portals). Gate the full workflow behind an explicit "audit" request.
+- **Standing rule (Cliff, 2026-11-10):** run it in full audit mode **every time a new project goes live**, after `/launch-check` and before the deploy (global `~/.claude/CLAUDE.md` plus step 4 of the launch-check skill). It also runs **on demand** on any project whenever asked ("run the security audit on <project>"). Output lands in `~/security-audit-skill/<repo>/run-N/`; confirmed findings are fixed or explicitly accepted before go-live.
+- **How to pull in:** `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global`. MIT, about 68k stars, identical to the repo HEAD as installed (checked 2026-11-10).
 
 ### addyosmani/agent-skills ✅ INSTALLED (25 skills)
 - **Link:** https://github.com/addyosmani/agent-skills
