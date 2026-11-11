@@ -113,6 +113,13 @@ Last updated: 2026-10-08
 - **Best used for:** General React/Tailwind building blocks in agent workflows — an alternative/complement to shadcn-animated and Kobra.
 - **How to pull in:** Copy from the site.
 
+### beUI ✅ INSTALLED (skill)
+- **Link:** https://github.com/starc007/ui-components (site: https://beui.dev)
+- **Type:** Component library (shadcn registry, MIT, ~2k stars) + free agent skill **`beui`** installed at `~/.claude/skills/beui` (narrowed so it only fires when beUI is named; the paid `beui-pro` skill is NOT installed)
+- **What it is:** Free animated React components on Framer Motion + Tailwind v4: buttons, tabs, toasts, bottom sheets, command palette, loaders, text effects, AI-agent blocks (chat layouts, prompt input, tool approvals, citations), charts, and a casino-games set. Copy-the-source model, reduced-motion support, an accessibility test suite. A public MCP (`https://mcp.beui.dev/mcp`, no key) and the skill map a request to the exact component slug.
+- **Best used for:** React/Next.js apps that want ready-made motion components or agent/chat UI (a stronger fit than hand-rolling a toast or sheet). Landing-style motion, so keep it out of internal tools unless asked; React Native has a separate beUI Native set.
+- **How to pull in:** skill `npx skills add starc007/ui-components --skill beui -g`; components `npx shadcn@latest add @beui/<slug>` (for example `animated-toast-stack`), or `curl -fsS https://beui.dev/r/registry.json` to list slugs.
+
 ### toggles.dev
 - **Link:** https://toggles.dev/
 - **Type:** Component snippets (theme toggles)
@@ -505,6 +512,7 @@ Source: https://x.com/RoundtableSpace/status/2110255627704455591 (2026-10-14), p
 | Take a prototype to production | karpathy vibe-to-agentic |
 | Repeatable agent dev workflow | obra/superpowers |
 | More agent-ready React components | KokonutUI |
+| Animated React components + agent/chat UI blocks (shadcn registry, MCP) | beUI |
 | Dark-mode toggle icon | toggles.dev |
 | A distinct look for a chart, or a canvas/physics starting point | Emergent Mind Labs (chart prompts, 500 canvas demos) |
 | Stop agent shipping UI slop | uizze.sh |
