@@ -120,6 +120,13 @@ Last updated: 2026-10-08
 - **Best used for:** React/Next.js apps that want ready-made motion components or agent/chat UI (a stronger fit than hand-rolling a toast or sheet). Landing-style motion, so keep it out of internal tools unless asked; React Native has a separate beUI Native set.
 - **How to pull in:** skill `npx skills add starc007/ui-components --skill beui -g`; components `npx shadcn@latest add @beui/<slug>` (for example `animated-toast-stack`), or `curl -fsS https://beui.dev/r/registry.json` to list slugs.
 
+### UI SDK (vercel-labs/ui) ✅ INSTALLED (skill)
+- **Link:** https://github.com/vercel-labs/ui (site: https://ui-sdk.dev)
+- **Type:** Headless behaviors library (Apache-2.0, beta, ~2.5k stars) + agent skill **`ui-sdk`** installed at `~/.claude/skills/ui-sdk` (trigger is already narrow: fires when a project has `@ui-sdk/*` or the user says ui-sdk; the repo's contributor-only `.agents/skills` are not installed)
+- **What it is:** Keyboard navigation, focus, selection, dismissal, popups, drag and drop and the ARIA they need, in `@ui-sdk/core` with adapters for React, Vue, Svelte, Solid and Web Components. Components render no styles of their own (style from `data-slot` and state attributes), and can be exposed to agents (createAgent, WebMCP). Docs ship inside each package as Markdown (`docs/llms.txt`); a no-build page can load `https://ui-sdk.dev/web.js` + `web.css`.
+- **Best used for:** Accessible interactive widgets (selects, comboboxes, dialogs, command palettes, tabs, menus) where you want correct keyboard/focus/ARIA without a visual style imposed, so it **suits internal tools and dashboards** as well as marketing sites. Beta, so pin the version.
+- **How to pull in:** `npm install @ui-sdk/react @ui-sdk/core` (swap the adapter for vue/svelte/solid/web), then the skill: `npx skills add vercel-labs/ui --skill ui-sdk -g`.
+
 ### toggles.dev
 - **Link:** https://toggles.dev/
 - **Type:** Component snippets (theme toggles)
@@ -513,6 +520,7 @@ Source: https://x.com/RoundtableSpace/status/2110255627704455591 (2026-10-14), p
 | Repeatable agent dev workflow | obra/superpowers |
 | More agent-ready React components | KokonutUI |
 | Animated React components + agent/chat UI blocks (shadcn registry, MCP) | beUI |
+| Accessible headless widgets (keyboard, focus, ARIA) in any framework | UI SDK (vercel-labs/ui) |
 | Dark-mode toggle icon | toggles.dev |
 | A distinct look for a chart, or a canvas/physics starting point | Emergent Mind Labs (chart prompts, 500 canvas demos) |
 | Stop agent shipping UI slop | uizze.sh |
