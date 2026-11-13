@@ -180,6 +180,15 @@ Last updated: 2026-10-08
 - **Best used for:** Giving coding agents production-quality UI judgment. (The `animate` / `animate-expo` / `mobile-native` skills in this stack are already installed globally.)
 - **How to pull in:** `npx skills@latest add emilkowalski/skills`.
 
+### Impeccable (pbakaus/impeccable) ✅ INSTALLED (skill, trigger narrowed)
+- **Link:** https://github.com/pbakaus/impeccable (site: https://impeccable.style)
+- **Type:** Agent skill + CLI detector (Apache-2.0, about 110k stars) - skill **`impeccable`** installed globally at `~/.claude/skills/impeccable` (symlink to `~/.agents/skills/impeccable`, 2.4 MB, v4.9.0)
+- **What it is:** "The design vocabulary for your coding agent": 24 commands (`/impeccable critique|audit|polish|harden|bolder|quieter|distill|colorize|typeset|layout|clarify|adapt|optimize|shape|init|document|extract|live|generate` ...) that steer, review and finish a UI, plus 62 deterministic AI-slop detection rules (no LLM, no API key). `init` writes `PRODUCT.md` per project, `document` writes `DESIGN.md`; findings are ranked P0-P3.
+- **Best used for:** Reviewing and iterating on an interface that already exists (point it at one page or component: `critique`, `audit`, `polish` before a launch). Complements `unslop-ui`, `emil-design-eng` and `lintapple`; it does not replace them.
+- **Installed as:** skill only. **Not done on purpose:** the design hook (`npx impeccable install` offers one that scans every UI file the agent edits and edits settings) and live mode (opens the dev server with an overlay and may run the `codex`/`claude` CLI). Say so if you want either. The skill's `description` was narrowed so it fires only when Impeccable or one of its commands is named, otherwise its broad "improve any frontend" trigger would load it on all UI work.
+- **Heads-up:** the first engine command downloads a prebuilt `impeccable` binary from the project's GitHub releases into `~/.impeccable/bin/` (checksummed via `engine-checksums.txt`). Nothing has been run yet, so nothing was downloaded. Detector without the skill: `npx impeccable detect src/`.
+- **How to pull in:** `npx skills add pbakaus/impeccable --skill impeccable -g` (then per project: `/impeccable init`).
+
 ### visualize
 - **Link:** https://github.com/display-dev/visualize
 - **Type:** Agent skill (Claude Code, Cursor, Codex, OpenCode, etc.)
@@ -521,6 +530,7 @@ Source: https://x.com/RoundtableSpace/status/2110255627704455591 (2026-10-14), p
 | More agent-ready React components | KokonutUI |
 | Animated React components + agent/chat UI blocks (shadcn registry, MCP) | beUI |
 | Accessible headless widgets (keyboard, focus, ARIA) in any framework | UI SDK (vercel-labs/ui) |
+| Design critique / audit / polish vocabulary + slop detector for an existing UI | Impeccable (pbakaus/impeccable) |
 | Dark-mode toggle icon | toggles.dev |
 | A distinct look for a chart, or a canvas/physics starting point | Emergent Mind Labs (chart prompts, 500 canvas demos) |
 | Stop agent shipping UI slop | uizze.sh |
